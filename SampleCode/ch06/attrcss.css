@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+}
+h2{
+    text-align: center; color:#1174c5; background-color:#d1e5fc;
+}
+/* 範例1 */
+a[href] { color: #9e5404; }
+
+/* 範例2 */
+a[target="_top"] { color: #068585; }
+
+/* 範例3 */
+p[class^="green"] { color: green; }
+.text { font-size: 16px; }
+
+/* 範例4 */
+p[class$="acidblue"] { color: #1e90ff; }
+
+/* 範例5 */
+.me-text {
+  font-size: 20px;
+}
+.span-block {
+  background-color: #026023;
+  color: #ffffff;
+  font-size: 20px;
+  display:block;
+  margin-top: 1rem;
+}
+*[class*="me"] { border: 1px solid #333333; }
+
+/* 範例6 */
+img[alt~="Love"] { border: 5px solid #b4b5b4; }
+
+/* 範例7 */
+p[class|="green"] { color: green; }

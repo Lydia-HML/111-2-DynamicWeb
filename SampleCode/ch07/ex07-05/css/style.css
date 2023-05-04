@@ -1,0 +1,52 @@
+body { 
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+}
+header { 
+    background: no-repeat, center top fixed; /*不重覆排列、靠上置中、固定位置*/
+    background-image: url("pic02.jpg"), url("bg.jpg");
+    background-size: cover; /*不變形，寬高等比例，在必要時局部裁切*/
+    background-blend-mode: overlay; /*將兩張圖以覆蓋模式呈現*/
+    height: 500px;
+    text-align: center;
+}
+section {
+    background-image: url("bg1.png");
+    background-repeat: repeat;	/*重複並排顯示*/
+    padding: 10px; 
+    margin: 10px;
+    text-align: center;
+}
+footer { 
+    background-color: #6db47c; /*背景色彩*/
+    padding: 10px; 
+    margin: 10px;
+    height: 60px;
+} 
+h1 {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-size: 8rem;
+    color: white;
+    mix-blend-mode: overlay; /*覆蓋效果*/  
+}
+.text-image { /*圖片遮罩效果文字*/
+    font-size: 5rem;
+    background-image: url("pic02.jpg");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /*色彩設為透明*/
+}
+h2 {    
+    font-size: 3rem;
+    color: #376733; 
+    border-bottom: 8px solid #6db47c; 
+    border-radius: 70px; 
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip範例</title>
+    <style>
+        #ex1 {
+            border: 5px dotted #1099b4;
+            padding: 15px;
+            background: lightblue;
+            background-clip: border-box;  
+        }
+        #ex2 {
+            border: 5px dotted #1099b4;
+            padding: 15px;
+            background: lightblue;
+            background-clip: padding-box;
+        }
+        #ex3 {
+            border: 5px dotted #1099b4;
+            padding: 15px;
+            background: lightblue;
+            background-clip: content-box;
+        }
+        h1 { font-size: 5em; font-family: "Arial Black"; }
+        .textcolor { /*漸層文字*/
+            background-image:linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .text-image { /*圖片文字*/
+            background-image: url("bg.jpg");
+            background-size: 50%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="ex1">
+        <p>border-box</p>
+    </div>
+    <p></p>
+    <div id="ex2">
+        <p>padding-box</p>
+    </div> 
+    <p></p>     
+    <div id="ex3">
+        <p>content-box</p>
+    </div>
+    <p></p>
+    <div>
+        <h1 class="textcolor">Orange Bird Street Market</h1>        
+    </div>
+    <p></p>
+    <div>
+        <h1 class="text-image">Orange Bird Street Market</h1>        
+    </div>
+</body>
+</html>

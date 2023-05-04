@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>屬性選擇器範例</title>
+    <link rel="stylesheet" type="text/css" href="attrcss.css">
+</head>
+<body>
+    <h2>範例1：元素[HTML屬性]</h2> <!--a[href]-->
+        <a href="#">有href屬性的連結</a><br>
+        <a>沒有href屬性的連結</a><br>
+    <h2>範例2：元素[HTML屬性="值"]</h2> <!--a[target="_top"]-->
+        <a href="#" target="_top">target屬性值為_top的連結</a><br>
+    <h2>範例3：元素[HTML屬性^="文字"]</h2> <!--p[class^="green"]-->
+        <p class="greenText">太棒了，我符合條件，所以變成綠色了。</p>
+        <p class="green-text">喔耶！我也符合條件，所以也變成綠色了。</p>
+        <p class="text greenText">喔NO，我不符合條件，所以沒有變成綠色。</p>
+        <p class="green">哈哈哈，我也符合條件耶，所以也變成綠色了。</p>
+    <h2>範例4：元素[HTML屬性$="文字"]</h2> <!--p[class$="acidblue"]-->
+        <p class="textacidblue">讚啦！我符合條件，所以變成湖水藍了。</p>
+        <p class="text textacidblue">加1，我也符合條件，所以變成湖水藍了。</p>
+        <p class="textacidblue text">不想面對，我不符合條件，所以沒變成湖水藍。</p>
+        <p class="acidblue">太美妙啦~我符合條件，所以變成湖水藍了。</p><br>
+    <h2>範例5：元素[HTML屬性*="文字"]</h2> <!--*[class*="me"]-->
+        <p class="me-text text">class名稱包含me的元素標籤</p>
+        <p class="text me-text">class名稱包含me的元素標籤</p>
+        <span class="span-block">class名稱不包含me的元素標籤</span><br>
+    <h2>範例6：元素[HTML屬性~="文字"</h2> <!--img[alt~="Love"]-->
+        <img src="https://picsum.photos/150/100" alt="I Very Love You"> <!--會套用樣式設定-->
+        <img src="https://picsum.photos/150/100" alt="I Love You"> <!--會套用樣式設定-->
+        <img src="https://picsum.photos/150/100" alt="ILVOEYOU">
+    <h2>範例7：元素[HTML屬性|="文字"]</h2> <!--p[class|="green"]-->
+        <p class="green">超棒的，我符合條件，所以變成綠色。</p>
+        <p class="green-">YA!!我也符合條件，所以變成綠色。</p>
+        <p class="green-text">意不意外？我也符合條件，所以變成綠色。</p>
+        <p class="Textgreen">哭哭，我不符合條件，所以不是綠色。</p><br>
+</body>
+</html>

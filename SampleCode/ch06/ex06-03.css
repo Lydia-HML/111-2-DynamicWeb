@@ -1,0 +1,31 @@
+header, footer, nav {
+    background-color:#940f94;
+    text-align: center;
+    color:white;
+    padding: 10px; 
+    margin: 10px;
+}
+article {
+    padding: 10px; 
+    margin: 10px;
+}
+h1 {
+    color:#fddfb9;            
+}
+h2 {
+    color:#b949cd;
+    text-align:center;            
+}
+h3 {
+    background-color:#fab845;
+    color:white;
+    text-align:center;
+    border:2px #fbebb7 solid;
+}
+a:link {
+    text-decoration:none;
+    color:#ffffff;
+}
+a:hover {
+    color:#fcdfa0;
+}

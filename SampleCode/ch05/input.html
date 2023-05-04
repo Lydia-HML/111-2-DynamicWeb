@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輸入類型元件</title>
+    <style>
+        header, footer, nav { text-align: center; padding: 10px; margin: 10px;}
+        header { color: white; background-color: #dda31d; }
+        nav { background-color: #a6d4fd; font-size: 14px;}
+        article { background-color: #f3f5f5; padding: 10px; margin: 10px;}
+        aside { width: 30%; padding-left: 10px; margin-left: 10px; float: right;}
+        footer { background-color: #fcd293; font-size: 12pt; }
+    </style>  
+</head>
+<body>
+    <header> 
+        <h1>輸入類型元件範例</h1>
+    </header>
+    <main>
+        <article>
+            <form>
+                <label for="fname">姓:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="請輸入姓氏"><br>
+                <label for="lname">名:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="請輸入名字">
+                <p></p>
+                <label>姓名：<input type="text" size=6 maxlength=6></label><br>
+                <label>密碼：<input type="password" size=12 maxlength=12></label>
+                <p></p>
+                <label>性別：<input type="radio" name="sex" value="M" checked>師哥
+                         <input type="radio" name="sex" value="F">美女</label>
+                <p></p>
+                <label>你打過的COVID-19疫苗：<br>
+                <input type="checkbox" name="covid" value="bnt">BNT
+                <input type="checkbox" name="covid" value="az">AZ
+                <input type="checkbox" name="covid" value="moderna">莫德納</label>
+                <p></p>
+                <label><input type="button" value="按鈕"></label>
+                <p></p>
+                <label><input type="submit" value="Send Request"></label>
+                <p></p>
+                <label>重設表單：<input type="reset" value="Reset"></label>
+                <p></p>
+                <label>上傳檔案：<input type="file" name="File1"><br>
+                <input type="submit" name="submit" value="上傳"></label>
+                <p></p>
+                <label>輸入要搜尋的關鍵字：<input type="search" name="q"></label>
+                <p></p>
+                <label>請選擇日期
+                <input type="date" value="2023-01-22" min="2023-01-01" max="2023-12-31"></label>
+                <p></p>
+                <label>請輸入時間：<input type="time" value="06:00" min="01:00" max="23:00"></label>
+                <p></p>
+                <label>會議時間
+               <input type="datetime-local" name="meeting-time" value="2023-01-22T19:30"
+                        min="2023-01-20T00:00" max="2023-01-25T00:00"></label>
+                <p></p>
+                <input type="month" value="2023-01-22" min="2023-01-01" max="2023-12-31">
+                <p></p>
+                <input type="week" value="2023-01-22" min="2023-01-01" max="2023-12-31">
+                <p></p>
+                <label>請輸入分數：<input type="number" step="0.01" min="0" max="100"></label>
+                <p></p>
+                <label for="vol">移動滑桿</label>
+                <input type="range" id="vol" name="vol" min="0" max="100">
+                <p></p>
+                <label for="mail">電子郵件</label>
+                <input type="email" id="mail" name="mail">
+                <p></p>
+                <label for="homepage">輸入網址</label>
+                <input type="url" id="homepage" name="homepage">
+                <p></p>
+                <p></p>
+                <label for="favcolor">選擇顏色</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ffff00">
+                <p></p>
+                <label for="phone">請輸入手機號碼</label>
+                <input type="tel" name="phone" size=11 maxlength=11 placeholder="0933-000000" pattern="09\d{2}-\d{6}"/>
+                <p></p>
+                <label for="myselect">請選擇尺寸<label><br>
+                    <select name="myselect" id="myselect">
+                        <option value="s">S號</option>
+                        <option value="m" selected>M號</option>
+                        <option value="l" disabled>L號</option>
+                        <option value="xl">XL號</option>
+                    </select>
+                <p></p>
+                <label for="lesson_choice">請選擇想學習的課程</label>
+                <select id="lesson_choice">
+                    <optgroup label="Web">
+                        <option value="html">HTML5</option>
+                        <option value="css">CSS3</option>
+                        <option value="js">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Database">
+                        <option value="sql">SQL</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="oracle">Oracle</option>                        
+                    </optgroup>
+                </select>
+                <p></p>
+                <textarea name="text" rows=4 cols=50 required >請在這裡輸入你的建議</textarea>
+                <p></p>
+                <fieldset>
+                    <legend>基本資料</legend>
+                    <label>帳號：<input type="text" size=12 maxlength=12></label>
+                    <label>密碼：<input type="password" size=12 maxlength=12></label>
+                </fieldset>
+                
+              </form>
+        </article>
+    </main>
+    <footer>Copyright © 2022</footer>
+</body>
+</html>

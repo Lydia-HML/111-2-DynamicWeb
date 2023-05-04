@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漸層使用範例</title>
+    <style>
+        section { min-height: 5vh; padding: 2em; font-size: 2rem;}
+        #grad1 { /*線性漸層*/
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        #grad2 { /*放射漸層*/
+            background: radial-gradient(circle, red, yellow, green);
+        }
+        #grad3 { /*圓錐漸層彩虹效果*/
+            background:conic-gradient(#03a,#f00, #f50, #ff0, #0c0, #09d, #909, #f00);
+        }
+        #grad4 { /*線性重覆效果*/
+            background: repeating-linear-gradient(90deg,#8fd, #8fd 15px,#09d 0, #09d 30px);
+        }
+        #grad5 { /*棋盤格紋效果*/
+            background: #eee;
+            background-image:linear-gradient(45deg,rgba(0,0,0,.25) 25%,transparent 0,transparent 75%, rgba(0,0,0,.25) 0), linear-gradient(45deg,rgba(0,0,0,.25) 25%, transparent 0,transparent 75%, rgba(0,0,0,.25) 0);
+            background-position: 0 0, 15px 15px;
+            background-size: 30px 30px;
+        }
+        #grad6 { /*漸層文字*/
+            font-size: 5em; 
+            font-family: "Arial Black";
+            background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <section id="grad1">線性漸層</section>
+    <p></p>
+    <section id="grad2">放射漸層</section>
+    <p></p>
+    <section id="grad3">圓錐漸層彩虹效果</section>
+    <p></p>
+    <section id="grad4">線性重覆效果</section>
+    <p></p>
+    <section id="grad5">棋盤格紋效果</section>
+    <p></p>
+    <section id="grad6">Orange Bird Street Market</section>
+</body>
+</html>

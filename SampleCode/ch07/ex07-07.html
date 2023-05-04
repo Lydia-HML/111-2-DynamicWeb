@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透明度範例</title>
+    <style>
+        section { min-height: 15vh; padding: 2em;}
+        #grad { 
+            background:
+                linear-gradient(45deg, #7dd2ec 45px, transparent 45px)64px 64px,
+                linear-gradient(45deg, #7dd2ec 45px, transparent 45px,transparent 91px, #d3f3fa 91px, #d3f3fa 135px, transparent 135px),
+                linear-gradient(-45deg, #7dd2ec 23px, transparent 23px, transparent 68px,#7dd2ec 68px,#7dd2ec 113px,transparent 113px,transparent 158px,#7dd2ec 158px);
+                background-color:#d3f3fa;
+                background-size: 128px 128px;            
+        }
+        section:nth-last-of-type(2) { opacity: 0.5;}
+        img { opacity:1.0; }
+        img:hover { opacity:0.7; }
+    </style>
+</head>
+<body>
+    <section id="grad">無透明度</section>
+    <section id="grad">有透明度</section>
+    <section>
+        <img src="https://picsum.photos/id/674/450/250">
+        <img src="https://picsum.photos/id/674/450/250">
+    </section>
+</body>
+</html>

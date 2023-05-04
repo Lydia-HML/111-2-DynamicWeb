@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問卷調查</title>
+    <style>
+        header, footer, nav { text-align: center; padding: 10px; margin: 10px;}
+        header { color: white; background-color: #1d77dd; }
+        nav { background-color: #a6d4fd; font-size: 14px;}
+        article { background-color: #f3f5f5; padding: 10px; margin: 10px;}
+        aside { width: 30%; padding-left: 10px; margin-left: 10px; float: right;}
+        footer { background-color: #bbd2fb; font-size: 12pt; }
+    </style>
+</head>
+<body>
+    <header> 
+        <h1>消費者使用習慣問卷調查</h1>
+    </header>
+    <main>
+        <article>
+        <form method="post" action="000@msa.com.tw" enctype="text/plain">
+            <fieldset><legend>基本資料</legend>
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" pattern="^[\u4e00-\u9fa5]+$|^[a-zA-Z\s]+$" placeholder="輸入姓名"> <!--pattern為設定姓名只能輸入中文跟英文-->
+                <label for="birthday">　生日</label>
+                <input type="date" id="birthday" name="birthday">
+                <label for="phone">　手機</label>
+                <input type="tel" name="phone" size=11 maxlength=11 placeholder="0933-000000" pattern="09\d{2}-\d{6}"/> <!--pattern為設定限制輸入的內容為09xx-xxxxxx格式-->
+                <label for="email">　電子郵件</label>
+                <input type="email" id="email" name="email" placeholder="輸入電子郵件信箱">     
+            </fieldset>
+            <p></p>
+            <fieldset>
+                <legend>使用品牌及電信業者調查</legend>
+                <label for="mobile">你曾使用過的行動電話品牌？</label><br>
+                <input type="checkbox" id="mobile" name="mobile" value="Apple" checked>Apple
+                <input type="checkbox" id="mobile" name="mobile" value="SONY">SONY
+                <input type="checkbox" id="mobile" name="mobile" value="HUAWEI ">HUAWEI
+                <input type="checkbox" id="mobile" name="mobile" value="ASUS ">ASUS
+                <input type="checkbox" id="mobile" name="mobile" value="小米">小米
+                <input type="checkbox" id="mobile" name="mobile" value="OPPO ">OPPO
+                <input type="checkbox" id="mobile" name="mobile" value="SAMSUNG">SAMSUNG
+                <p></p>
+                <label for="telecom">你使用哪家電信業者的門號？</label>
+                <select id="telecom" name="telecom" size="1" required> <!--設為必填-->
+                    <option value="cht" selected >中華電信</option> <!--此選項為預設值-->
+                    <option value="fetnet">遠傳電信</option>
+                    <option value="taiwanmobile">台灣大哥大</option>
+                    <option value="tstartel">台灣之星</option>
+                </select>
+                <p></p>
+                <label for="telecom_select">選擇的原因？</label><br>
+                <select id="telecom_select" name="telecom_select" size="4" multiple> <!--選單顯示4個選項，且選項可以複選-->
+                    <option value="select1" selected>價格優惠</option> <!--此選項為預設值-->
+                    <option value="select2">方案眾多</option>
+                    <option value="select3">網路速度夠快</option>
+                    <option value="select4">有送好康贈品</option>
+                </select>
+            </fieldset>
+            <p></p>
+            <label for="question">使用行動電話遇到的問題</label><br>
+            <textarea id="question" name="question" rows=4 cols=80 placeholder="請在這留下你的建議">
+            </textarea>
+            <p></p>
+            <input type="submit" name="submit" value="送出">
+            <input type="reset" name="reset" value="取消">
+        </form>
+    </article>
+</main>
+    <footer>Copyright © momoco</footer>
+</body>
+</html>
