@@ -1,0 +1,268 @@
+* {
+	box-sizing: border-box;
+  }  
+body {
+	font-family:"Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+}
+a {
+	text-decoration: none; /*移除超連結底線*/
+}
+/*grid容器設定*/
+.grid-container {
+	display: grid;
+	grid-template-areas: 
+	  'header header header header header header' /*header要占據6欄*/
+	  'nav nav nav nav nav nav' /*nav要占據6欄*/
+	  'left middle middle middle middle right'  /*left占1欄，middle占4欄，right占1欄*/
+	  'footer footer footer footer footer footer'; /*footer要占據6欄*/
+	  grid-gap: 10px 10px;   /*間隔設定*/
+}   
+/*header樣式*/
+header {
+	grid-area: header;
+	background-color: #cdbba7;
+	padding: 30px;
+	text-align: center;
+	border-radius: 10px;
+}
+/*導覽列*/
+nav {
+	grid-area: nav;
+    text-align: center;
+    font-size: 14px;
+	border-bottom: solid 10px #cebba5;
+	border-radius: 10px;
+}
+/*導覽列三層選單設定*/
+ul {  /*取消ul預設的內縮及項目符號樣式*/
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.menu {
+	display: inline-block; 
+}
+.menu li {
+	position: relative;
+	white-space: nowrap;
+	border-right: #f7e8dd 1px solid;
+}
+.menu > li:last-child {
+	border-right: none;
+}
+.menu > li {
+	float: left; /*選單第一層由左到右顯示*/
+}
+.menu a { /*選單樣式設定*/
+	display: block;
+	padding: 0 30px;
+	background-color: #fff;
+	color: #333333;
+	text-decoration: none;
+	line-height: 40px;
+}
+.menu a:hover { /*滑鼠移入按鈕變色*/
+	background-color: #cdbba7;
+	color: #ffffff;
+}
+.menu li:hover > a { /*滑鼠移入第二層選單，第一層按鈕保持變色*/
+	background-color: #cdbba7;
+	color: #ffffff;
+}
+.menu ul {
+	border: #f7e8dd 1px solid;
+	position: absolute;
+	z-index: 99;
+	left: -1px;
+	top: 100%;
+    min-width: 150px;
+}
+.menu ul li {
+	border-bottom: #f7e8dd 1px solid;
+}
+.menu ul li:last-child {
+	border-bottom: none;
+}
+.menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
+	z-index: 999;
+	top: 0;
+	left: 90%;
+}
+.menu ul { /*隱藏次選單*/
+	left: -99999px; /*設定成最大的負數，將元素放到可視範圍外*/
+	opacity: 0; /*完全透明*/
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+.menu li:hover > ul { /*滑鼠移入展開選單*/
+	opacity: 1;
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+	left: -1px;
+	border-right: 5px;
+}
+.menu li:hover > ul ul { /*滑鼠移入時，次選單之後的選單依然隱藏*/
+	left: -99999px;
+}
+.menu ul li:hover > ul { /*第二層之後的選單位置*/
+	left: 90%;
+}
+ 
+.left, .middle, .right {
+	padding: 10px;
+	margin: 10px;
+} 
+.left { /*grid左邊的欄*/
+	grid-area: left;
+	background-color:#f7e8dd;
+	border-left: solid 20px #cebba5;
+	border-radius: 10px;
+}
+.left img {
+	border-radius: 50%;
+	border: 6px solid rgb(218, 56, 86, 0.3);
+	display: block; 
+	margin: auto;	
+}
+  .middle { /*grid中間的欄*/
+	grid-area: middle;
+	background-color:#f7e8dd;
+	border-radius: 10px;
+}
+.middle img {
+	  height:80%;
+	  width:100%;
+	  object-fit:cover; /*填滿元素的寬度及高度(維持原比例)，超出的會裁剪掉*/
+}  
+.right { /*grid右邊的欄*/
+	grid-area: right;
+	background-color:#f7e8dd;
+	border-top: solid 20px #cebba5;
+	border-bottom: solid 20px #cebba5;
+	border-radius: 10px;
+}
+div.polaroid { /*相片框*/
+	width: 45%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 10px;
+	float: left;
+	margin: 10px;
+}  
+div.container { /*相片文字*/
+	font-size:small;
+	padding: 10px 10px;
+
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both; /*清除浮動*/
+}
+h1 {
+	position: relative;
+	padding: 0.25em 1em;
+	border-top: solid 2px #f7e8dd;
+  	border-bottom: solid 2px #f7e8dd;
+}
+h1:before, h1:after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 2px;
+	height: -webkit-calc(100% + 20px);
+	height: calc(100% + 20px);
+	background-color: #f7e8dd;
+}
+h1:before {
+	left: 10px;
+}
+h1:after {
+	right: 10px;
+}
+h2 {
+	position: relative;
+  	background: #cebba5;
+  	padding: 2px 5px 2px 20px;  	
+  	color: #474747;
+  	border-radius: 0 10px 10px 0;	
+}
+h2:before {
+	font-family: "Font Awesome 6 Free";
+	content: "\f041";
+	display: inline-block;
+	line-height: 40px;
+	position: absolute;
+	padding: 0em;
+	color: white;
+	background: #ff6363;
+	font-weight: 900;
+	width: 40px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	left: -1em;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 50%;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.29);
+}
+h3 {
+	color: #da3856;
+	border-bottom: double 5px rgb(218, 56, 86, 0.3);
+}
+h3:before {
+	font-family: "Font Awesome 6 Free";
+	content: "\f1b0";
+	padding-right : 5px; /*文字間距*/
+}
+p {
+	text-align: justify;
+}
+.list-menu {
+	font-weight: bolder;
+	background: rgb(218, 56, 86, 0.2);
+	border-radius: 10px 0 0 10px;
+	margin-bottom: 5px;
+	line-height: 1.5;
+	padding: 0.5em;
+}
+.list-menu a {
+	  color:#da3856;
+}
+.list-menu a:hover {
+	font-size:130%;
+}
+/*footer樣式設定*/
+footer {
+	grid-area: footer;
+	background-color: #D8D2CB;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+footer a {  
+	color: #050505;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none; 
+}  
+  footer a:hover { 
+	color: #858685;
+}
+footer p {
+	text-align: center;
+}
+/* Responsive layout*/
+@media (max-width: 600px) {
+	.grid-container  {
+	  grid-template-areas: 
+		'header header header header header header' 
+		'nav nav nav nav nav nav'
+		'left left left left left left' 
+		'middle middle middle middle middle middle' 
+		'right right right right right right' 
+		'footer footer footer footer footer footer';
+	}
+}

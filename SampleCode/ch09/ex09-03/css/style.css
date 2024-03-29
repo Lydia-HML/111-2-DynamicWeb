@@ -1,0 +1,140 @@
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	font-family:"Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;            
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+.column { 
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+.column img {
+	margin-top: 8px;	
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+}
+.box {
+	position: relative;
+	width: 100%;
+}  
+.overlay {
+	position: absolute;
+	bottom: 100%; /*從上往下*/
+	left: 0;
+	right: 0;
+	background-image: linear-gradient(to top, rgb(250, 112, 154, 0.8) 0%, rgb(254, 225, 64, 0.8) 100%);
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transform: scale(0.5) rotateY(360deg); /*以參考點為中心縮放0.5倍，旋轉360度*/
+   	transition: all 1.2s;
+}  
+.box:hover .overlay {
+	bottom: 0;
+	height: 100%;
+	transform: scale(1) rotateY(0deg); /*以參考點為中心縮放1倍，旋轉θ度*/
+}  
+.text {
+	font-family: 'Petit Formal Script', cursive;
+	font-weight: 900;
+	white-space: nowrap; 
+	color: #1f1f1f;
+	font-size: 1.5rem;
+	border-bottom: 5px solid white;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /*往右移-50%，往下移-50%*/	
+}
+header { /*多重背景設定*/
+	width: 100%;
+	height: 85vh;
+    background: linear-gradient(115deg, #fac213 50%, transparent 50%) center center / 100% 100%,
+				/*漸層，background-position/漸層寬高*/
+            	url("https://picsum.photos/id/823/1000/600") right center / auto 100%;
+				/*背景連結，background-position/圖片寬高*/				
+	animation:example1;	/*動畫名稱，與keyframes名稱對應*/
+	animation-duration: 4s;    /*動畫持續時間*/
+	animation-iteration-count: 1;    /*動畫次數*/ 		
+}
+@keyframes example1{
+    from { /*第一個關鍵影格，也就是開始的狀態*/
+		transform: rotate(-30deg) translateY(-100%); 
+		opacity: 0;
+	  }
+	to { /*最後一個關鍵影格，結束的狀態*/
+		transform: rotate(0deg) translateY(0%);
+		opacity: 1;
+	  }
+}
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.headerText {  /*文字編排設定*/
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 20px;	
+}
+.box1 {
+	left: 200px;
+	top: 20px;
+	background: url("photo.jpg") right center / auto 100%;
+	border: 5px white solid;
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	animation-name: example2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+}
+@keyframes example2 {
+	0% {	/*第一個關鍵影格，也就是開始的狀態*/
+		transform: rotate(0deg); 
+	}
+	50% {	/*中間影格*/
+		transform: rotate(360deg)
+	}
+	100% {	/*最後一個關鍵影格，結束的狀態*/
+		transform: rotate(360deg)
+	}
+  }
+
+h1 {
+	font-family: 'Tangerine', cursive;
+	font-size: 4rem;
+	font-weight: 900;
+	border-bottom: 20px solid rgb(250, 250, 250, 0.3);
+}
+p {
+	font-size: 1rem;
+	font-family: 'Petit Formal Script', cursive;
+	line-height: 30px;	
+}
+
+@media (max-width: 800px) { /*如果螢幕寬度為800px以下，就改為兩欄*/
+.column {
+		flex: 50%;
+		max-width: 50%;
+	}
+}        
+@media (max-width: 600px) { /*如果螢幕寬度為600px以下，就套用兩欄彼此堆疊而不是彼此相鄰*/
+.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}     
