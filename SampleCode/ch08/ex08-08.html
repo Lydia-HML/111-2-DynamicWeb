@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相本</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", "Courier New", monospace;            
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        .column { 
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+        h1 {
+          position: relative;
+          padding: 0.25em 1em;
+          border: solid 2px #e79686;
+          border-radius: 3px 0 3px 0;
+          color: #716e77;
+        }
+        h1:before, h1:after {
+          content: '';
+          position: absolute;
+          width:10px;
+          height: 10px;
+          border: solid 2px #e79686;
+          border-radius: 50%;
+        }
+        h1:after {
+          top:-12px;
+          left:-12px;
+        }
+        h1:before {
+          bottom:-12px;
+          right:-12px;
+        }
+        p { 
+          color: #a39391;
+        }        
+        @media (max-width: 800px) { /*如果螢幕寬度為800px以下，就改為兩欄*/
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }        
+        @media (max-width: 600px) { /*如果螢幕寬度為600px以下，就套用兩欄彼此堆疊而不是彼此相鄰*/
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }     
+    </style>
+<body>
+<header>
+  <h1>Momoco Image Gallery</h1>
+  <p>Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.</p>
+</header>
+<section class="row"> 
+  <section class="column">
+    <img src="https://picsum.photos/id/318/600/800" style="width:100%">
+    <img src="https://picsum.photos/id/284/500/500" style="width:100%">
+    <img src="https://picsum.photos/id/283/600/400" style="width:100%">
+    <img src="https://picsum.photos/id/291/300/500" style="width:100%">
+    <img src="https://picsum.photos/id/293/760/450" style="width:100%">
+    <img src="https://picsum.photos/id/294/450/650" style="width:100%">
+    <img src="https://picsum.photos/id/295/600/400" style="width:100%">
+  </section>
+    <section class="column">
+        <img src="https://picsum.photos/id/30/800/600" style="width:100%">
+        <img src="https://picsum.photos/id/302/500/500" style="width:100%">
+        <img src="https://picsum.photos/id/305/400/600" style="width:100%">
+        <img src="https://picsum.photos/id/308/300/500" style="width:100%">
+        <img src="https://picsum.photos/id/309/450/750" style="width:100%">
+        <img src="https://picsum.photos/id/310/650/530" style="width:100%">
+  </section>   
+  <section class="column">
+    <img src="https://picsum.photos/id/31/600/800" style="width:100%">
+    <img src="https://picsum.photos/id/311/500/500" style="width:100%">
+    <img src="https://picsum.photos/id/312/600/400" style="width:100%">
+    <img src="https://picsum.photos/id/313/300/500" style="width:100%">
+    <img src="https://picsum.photos/id/314/760/450" style="width:100%">
+    <img src="https://picsum.photos/id/315/450/650" style="width:100%">
+    <img src="https://picsum.photos/id/316/600/400" style="width:100%">
+  </section>  
+  <section class="column">
+    <img src="https://picsum.photos/id/32/800/600" style="width:100%">
+    <img src="https://picsum.photos/id/319/500/500" style="width:100%">
+    <img src="https://picsum.photos/id/320/400/600" style="width:100%">
+    <img src="https://picsum.photos/id/321/300/500" style="width:100%">
+    <img src="https://picsum.photos/id/322/450/750" style="width:100%">
+    <img src="https://picsum.photos/id/323/650/530" style="width:100%">
+  </section>
+</section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position範例</title>
+    <style>
+		body { 
+            font-family: "Helvetica Neue", "Courier New", monospace;
+            margin: 0;
+        }
+		section {
+			position:relative;
+			top:10px;    /*向下移動10像素*/
+			width:1200px;
+			margin:10px auto;
+		}
+		img {
+			width:100%;
+			height:auto;
+		}
+		.textbox {
+			position: absolute;
+			top: 10%; /*下移section高度的10%*/
+			right:0; /*貼齊section的右側*/
+			padding: 0.5em 1em;
+    		margin: 2em 0;
+    		background: #2f2f2f;
+    		border-left: solid 10px #fed85c;
+		}
+		.font1 {
+  			margin-top: 0;
+  			font-size: 3rem;
+  			letter-spacing: 2px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/photo.JPG" alt="Portugal">
+		<p class="text textbox font1">Traveling<br>in Portugal</p>
+		<img src="https://picsum.photos/id/318/1200/600">
+	</section>
+	<section>
+
+	</section>
+</body>
+</html>

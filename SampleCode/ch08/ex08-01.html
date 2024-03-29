@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing範例</title>
+    <style>
+        body{
+            padding: 20px;  background: #eaeaea;
+        }
+        .box1{
+            width: 450px; /*寬度固定*/
+            height: 150px; /*高度固定*/
+            padding: 20px;
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 15px #484848 solid;
+            box-sizing: border-box; /*padding及border將不影響總width(寬度)*/
+            background: #56befa;
+            color:#FFF;
+        }
+        .box2{ /*實際寬高＝所設定的數值＋border＋padding*/
+            width: 450px; /*寬度固定*/
+            height: 150px; /*高度固定*/
+            padding: 20px;
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 15px #484848 solid;
+            background: #0fb5a7;
+            color:#FFF;
+        }
+    </style>
+</head>
+<body>
+    <section class="box1">實際寬高＝所設定的數值(已包含border及padding)</section>
+    <section class="box2">實際寬高＝所設定的數值＋border＋padding</section>
+</body>

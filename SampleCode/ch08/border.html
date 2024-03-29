@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邊框樣式範例</title>
+    <style>
+        body {background-color: #ffffff;}
+        h1 { border: 5px double #996004; border-radius: 12px; }
+        h2.solid {border-style: solid;}
+        h2.dashed {border-style: dashed;}
+        h2.double {border-style: double;}
+        h2.dotted {border-style: dotted;}
+        h2.groove {border-style: groove;}
+        h2.ridge {border-style: ridge;}
+        h2.inset {border-style: inset;}
+        h2.outset {border-style: outset;}
+        h2.none {border-style: none;}
+        h2.hidden {border-style: hidden;}
+        h2.mix {border-style: groove hidden solid hidden;} /*上邊框、右邊框、下邊框和左邊框*/
+        h2.radius { border: 6px solid #045699; border-radius: 20px 20px 0 0;}
+        h2.radius2 {
+            border-radius: 25px;
+            border-top-left-radius: 60px 100px;
+            background: #c5c6c6;
+            padding: 20px;
+            width: 250px;
+            height: 60px;
+        }
+        h2.borderimg1 { 
+            border: 6px solid transparent;
+            padding: 15px;
+            border-image-source: url("border.jpg");
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 20px;
+         }
+         h2.borderimg2 { 
+            border: 6px solid transparent;
+            padding: 15px;
+            border-image-source: url("border.jpg");
+            border-image-repeat: stretch;
+            border-image-slice: 30;
+            border-image-width: 20px;
+         }
+         h2.borderimg3 { 
+            border: 6px solid transparent;
+            padding: 15px;
+            border-image-source: url("border.jpg");
+            border-image-repeat: repeat;
+            border-image-slice: 30;
+            border-image-width: 20px;
+         }
+    </style>
+</head>
+<body>
+    <h1>邊框樣式範例</h1>
+    <h3>Orange Bird Street Market</h3>
+    <h2 class="solid">Orange Bird Street Market</h2>
+    <h2 class="dashed">Orange Bird Street Market</h2>
+    <h2 class="double">Orange Bird Street Market</h2>
+    <h2 class="dotted">Orange Bird Street Market</h2>
+    <h2 class="groove">Orange Bird Street Market</h2>
+    <h2 class="ridge">Orange Bird Street Market</h2>
+    <h2 class="inset">Orange Bird Street Market</h2>
+    <h2 class="outset">Orange Bird Street Market</h2>
+    <h2 class="none">Orange Bird Street Market</h2>
+    <h2 class="hidden">Orange Bird Street Market</h2>
+    <h2 class="mix">Orange Bird Street Market</h2>
+    <h2 class="radius">Orange Bird Street Market</h2>
+    <h2 class="radius2">Orange Bird Street Market</h2>
+    <h2 class="borderimg1">border-image-repeat: round</h2>
+    <h2 class="borderimg2">border-image-repeat: stretch</h2>
+    <h2 class="borderimg3">border-image-repeat: repeat</h2>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index範例</title>
+    <style type="text/css">
+		section { text-align: center;}
+        img {display:block; margin:auto;}
+        .sushi1 {
+            position: relative;
+            z-index: 2; /*該物件會在上層*/
+        }
+        .sushi2 {
+            top:-80px;
+            position: relative;
+            z-index: 1; /*該物件會在下層*/
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img class="sushi1" src="sushi01.png"/>
+        <img class="sushi2" src="sushi02.png"/>
+    </section>
+</body>
+</html>

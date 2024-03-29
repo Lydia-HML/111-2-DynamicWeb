@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變形處理範例</title>
+    <style>
+        body { margin: 30px; background-color: #d6d5d5;}
+        div.polaroid {
+            width: 284px;
+            padding: 10px 10px 10px 10px;
+            border: 1px solid #8f8e8e;
+            background-color: white;
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+        div.polaroid:hover {
+            background: #5b5b5b;
+            color:azure;
+            border-radius: 5%;
+            transition: all 1s ease-in-out; /*持續期間1秒，緩入緩出*/
+            transform: rotate(720deg); /*順時針旋轉720度*/
+        }     
+        div.rotate_right {
+            float: left;
+            transform: rotate(-5deg); /*順時針旋轉-5度*/
+        }
+        div.rotate_left {
+            float: left;
+            transform: rotate(8deg); /*順時針旋轉8度*/
+        }
+    </style>
+</head>
+<body>
+    <div class="polaroid rotate_right color">
+        <img src="photo.jpg" width="284" height="283">
+        <p>My Secret Garden</p>
+    </div>
+    <div class="polaroid rotate_left color">
+        <img src="https://picsum.photos/id/301/284/283" width="284" height="283">
+        <p>Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.</p>
+    </div>
+    <div class="polaroid rotate_right color">
+        <img src="https://picsum.photos/id/305/284/283" width="284" height="283">
+        <p>My Secret Garden</p>
+    </div>
+    <div class="polaroid rotate_left color">
+        <img src="https://picsum.photos/id/308/284/283" width="284" height="283">
+        <p>Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.</p>
+    </div>
+</body>
+</html>

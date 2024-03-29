@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變形處理範例</title>
+    <style>
+        body {
+            font-size: 2.5rem;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+  .box {
+    width: 250px;
+    height: 250px;
+    line-height: 150px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .original {
+    margin: 20px;
+    border: 1px dashed #cecfd5;
+    background: #badefd;
+    float: left;
+  }
+  .child {
+    background: #2d67b3;
+    cursor: pointer;
+  }
+  .scale1:hover {
+    transition: transform 1s linear;
+    transform-origin: 0 0;
+    transform: scale(.5);
+  }
+  .scale2:hover {
+    transition: transform 1s linear;
+    transform-origin: 50% 50%;
+    transform: scale(.5);
+  }
+  .scale3:hover {
+    transition: transform 1s linear;
+    transform-origin: 100% 100%;
+    transform: scale(.5);
+  }
+  .translate:hover {
+    transition: transform 1s linear;
+    /*transform-origin: 100% 100%;*/
+    transform: translate(10px, 10px);
+  }
+    </style>
+</head>
+<body>
+    <div class="original box">
+        <div class="child box scale1">scale1</div>
+      </div>
+      <div class="original box">
+        <div class="child box scale2">scale2</div>
+      </div>
+      <div class="original box">
+        <div class="child box scale3">scale3</div>
+      </div>
+      <div class="original box">
+        <div class="child box translate">translate</div>
+      </div>
+</body>
+</html>
