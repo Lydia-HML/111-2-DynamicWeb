@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>TAYAL TATAK</title>
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+	  	}	  
+	  	* {
+			box-sizing: border-box;
+	  	}
+	  
+	  .bg-image {
+		height: 100%; 
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  }
+	  
+	  .img1 { background-image: url("https://picsum.photos/id/284/1600/800"); }
+	  
+	  #bg-text {
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0, 0.4); 
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 1rem;
+		border: 1px solid whitesmoke;
+		position: absolute;
+		top: 20%;
+		z-index: 2;
+		width: 200px;
+		padding: 20px;
+		text-align: center;
+		opacity: 0.4;
+	  }
+	</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function(){
+    			$("#bg-text").animate({
+					width: "75%",
+    				opacity: 1,
+    				marginLeft: "10%",
+    				fontSize: "4em",
+    				borderWidth: "10px"
+  				}, 2000 , function(){
+					$(this).css("color","yellow") 
+				});
+    		});
+		</script>	
+</head>
+<body>
+	<div class="bg-image img1"></div>
+	<div id="bg-text">TAYAL TATAK 大岩打檔</div>	
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>M O M O C O</title>
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+	  	}	  
+	  	* {
+			box-sizing: border-box;
+	  	}
+	  
+	  .bg-image {
+		height: 100%; 
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  }
+	  
+	  .img1 { background-image: url("https://picsum.photos/id/420/1600/800"); }
+	  
+	  #bg-text {
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0, 0.4); 
+		color: #ffffff;
+		font-weight: bold;
+		font-size: 5rem;
+		border: 10px solid whitesmoke;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		width: 600px;
+		padding: 20px;
+		text-align: center;
+	  }
+	</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#bg-text").on({
+  					mouseover: function () { //滑鼠移入
+    					$(this).css("color" , "yellow");
+    					$(this).text("Bonjour! Momoco");
+					},
+  					mouseleave: function(){ //滑鼠移出
+    					$(this).css("color" , "#ffffff");
+    					$(this).text("MOMOCO Paris");
+  					}
+				});
+			});
+		</script>	
+</head>
+<body>
+	<div class="bg-image img1"></div>
+	<div id="bg-text">MOMOCO Paris</div>
+</body>
+</html>

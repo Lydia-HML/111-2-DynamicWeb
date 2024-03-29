@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>STOP()</title>
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+	  	}	  
+	  	* {
+			box-sizing: border-box;
+	  	}
+		div {
+            width: 200px; /*寬度固定*/
+            height: 200px; /*高度固定*/
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 8px #484848 solid;
+            box-sizing: border-box; /*padding及border將不影響總width(寬度)*/
+            background: lightblue;
+            color: lightblue;
+			font-size: 1.5rem; /*文字大小*/
+        }
+		input[type=button] {
+  			width: 100px;
+  			background-color: lightblue;
+  			color:#4f4f4f;
+  			padding: 8px 20px;
+  			margin: 8px 0;
+  			border: none;
+  			border-radius: 4px;
+  			cursor: pointer;
+			font-size: 1.2rem;
+		}
+		input[type=button]:hover {
+  			background-color: gainsboro;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script> 
+		$(document).ready(function(){
+			$("#start").click(function() {
+				$("div").animate({width: "+=200px"}, 2000);
+			});
+ 			$("#stop").click(function() {
+  				$("div").stop();
+			});
+		});
+	</script> 
+</head>
+<body>
+<input type="button" id="start" value="開始">
+<input type="button" id="stop" value="停止">
+<div></div>	
+</body>
+</html>
