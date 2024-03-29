@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener綁定事件</title>
+	<style>
+		body {
+			text-align: center;
+		}
+        #myimg{
+            border: 10px #484848 solid;
+        }
+    </style>
+<body>
+	<img id="myimg" src="https://picsum.photos/id/628/450/250"><br><br>
+	<script>
+		document.getElementById('myimg').addEventListener('mouseover', mouseOver);
+		document.getElementById('myimg').addEventListener('mouseout', mouseOut);
+
+		function mouseOver() {
+    		document.getElementById('myimg').src = 'https://picsum.photos/id/640/450/250';
+		}
+		function mouseOut() {
+    		document.getElementById('myimg').src = 'https://picsum.photos/id/558/450/250';
+		}
+	</script>
+</body>
+</html>

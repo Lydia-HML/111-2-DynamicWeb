@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm()方法</title>
+	<style>
+		body {
+			text-align: center;
+		}
+		#demotext {
+            font-size: 3rem; /*文字大小*/
+			font-weight: 900;
+            text-decoration: underline solid orangered 20%; /*在文字下方加入底線*/
+        }
+        div{
+            width: 600px; /*寬度固定*/
+            height: 300px; /*高度固定*/
+            padding: 20px;
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 10px #484848 solid;
+            box-sizing: border-box; /*padding及border將不影響總width(寬度)*/
+            background: aquamarine;
+            color:#272727;
+			font-size: 1.2rem; /*文字大小*/
+        }
+    </style>
+<body>
+	<div>
+		<p>請按下試試看按鈕顯示對話框</p>
+		<button onclick="myConfirm()">試試看</button>
+		<p id="demotext"></p>
+	<script>
+		function myConfirm() {
+		  let text;
+		  if (confirm('請按下按鈕') == true) {
+			text = '你按下了確定按鈕';
+		  } else {
+			text = '你按下了取消按鈕';
+		  }
+		  document.getElementById('demotext').innerHTML = text;
+		}
+</script>
+</div>
+</body>
+</html>

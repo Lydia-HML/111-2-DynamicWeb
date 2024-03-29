@@ -1,0 +1,47 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  * {
+	box-sizing: border-box;
+  }
+  
+  .bg-image {
+	height: 80%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+  .img1 { background-image: url("https://picsum.photos/id/420/1600/800"); }
+  .img2 { background-image: url("https://picsum.photos/id/318/1600/800"); }
+  .img3 { background-image: url("https://picsum.photos/id/349/1600/800"); }
+  .img4 { background-image: url("https://picsum.photos/id/358/1600/800"); }
+  
+  .bg-text {
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4); 
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 5rem;
+	border: 10px solid whitesmoke;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 600px;
+	padding: 20px;
+	text-align: center;
+  }
+  .mytimer {
+	background-color: rgb(45, 45, 45);
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.5rem;
+	text-align: center;
+	height: 100px;
+	padding: 35px;
+  }

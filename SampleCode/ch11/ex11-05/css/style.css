@@ -1,0 +1,286 @@
+* {box-sizing:border-box;}
+body {
+  font-family:"Noto Sans CJK TC", "Microsoft JhengHei", PingFang, STHeiti, sans-serif, serif;
+  margin: 0;
+  font-size: 100%;
+}
+a {
+    text-decoration: none; /*移除超連結底線*/
+}
+/*將所有的圖片區塊都消失不見*/
+.mySlideshows {
+  display: none;
+}
+.slideshow-container {
+  max-width:100%;
+  height:auto;
+  position: relative;
+  margin: 0 auto;
+}
+/*左右按鈕*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 10px 10px 0;
+  user-select: none;
+}
+/*將下一張按鈕放在左側*/
+.next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(244, 248, 7, 0.8);
+}
+/*圖片說明文字*/
+.text {
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  padding: 50px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/*圓點按鈕*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #989898;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+.active, .dot:hover {
+  background-color: #282828;
+}
+/*圖片變暗消失的效果*/
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*導覽列設定*/
+nav {
+  overflow: hidden;
+  background-color: #089a45;
+}
+nav a {  /*導覽列超連結設定*/
+  float: left;
+  display: block;
+  color: whitesmoke;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+}  
+nav a:hover { /*導覽列滑鼠移過超連結設定*/
+  background-color: #ddd;
+  color: #089a45;
+}
+nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+nav .icon {
+  display: none;
+}
+/*導覽列媒體查詢設定*/
+@media screen and (max-width: 600px) {
+  nav a:not(:first-child) {display: none;}
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav.responsive {position: relative;}
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+h1 {
+  font-size: 8vmin;
+  padding: 8px;
+  text-align: center;
+  mix-blend-mode: overlay; /*覆蓋效果*/
+}
+section {
+  padding: 20px;
+}
+/*flexbox設定*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+/*建立彼此相鄰的3個欄*/
+.column {
+  padding: 10px;
+}
+/*小欄*/
+.column.side {
+  flex: 1;
+  background-color: #f2efef;
+  padding: 20px;
+  margin-bottom: 10px;
+  overflow:hidden;
+}
+/*中欄*/
+.column.middle {
+  flex: 2;
+  background-color: #e8e8e8;
+  padding: 20px;
+  margin-bottom: 10px;
+  overflow:hidden;
+}
+/*RWD設定*/
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+/*按鈕*/
+.button {
+  font-size: 1rem;
+  text-align: center;
+  background: #3bae8f;
+  color: #fff;
+  padding: 8px 10px;
+  transition: border-radius .5s ease-in;
+}
+.button:hover {
+  background: orangered;
+  border-radius: 50%;
+}
+
+h2 {
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #64debe;
+  border-radius: 3px 0 3px 0;
+  color: #716e77;
+  text-align: center;
+}
+h2:before, h2:after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #64debe;
+  border-radius: 50%;
+}
+h2:after {
+  top:-12px;
+  left:-12px;
+}
+h2:before {
+  bottom:-12px;
+  right:-12px;
+}
+h3 {
+  padding: 0.25em 1em;
+  text-align: center;
+  color: #08644b;
+  border: dashed 1px #08644b;
+}
+h5 {
+  text-align: center;
+}
+P {
+  font-size: 1rem;
+  text-align: justify;
+  line-height:24px;
+}
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+form {
+  font-size: 1.2rem;
+}
+input[type=text], input[type=email], input[type=search],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+iframe {
+  width: 100%;
+}
+/*頁尾*/
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color:gainsboro;
+}
+footer a {  
+  color: #050505;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none; 
+}  
+footer a:hover { 
+  color: #858685;
+}
+/*TOP按鈕*/
+#myTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #970303;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+#myTop:hover {
+  background-color: #424242;
+}

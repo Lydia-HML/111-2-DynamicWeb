@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Bird Street Market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button onclick="topFunction()" id="myTop" title="top">Top</button>
+    <script src="js\topbutton.js"></script>
+    <nav id="myTopnav">
+        <a href="#" class="active"><i class="fa-solid fa-house-user fa-fw"></i>Home</a>
+        <a href="#"><i class="fa-solid fa-thumbs-up fa-fw"></i>About</a>
+        <a href="#"><i class="fa-solid fa-bag-shopping fa-fw"></i>Product</a>
+        <a href="#"><i class="fa-solid fa-map-location-dot fa-fw"></i>Contact</a>
+        <!--點擊這個連結實際上就只會執行navFunction-->
+        <a href="javascript:void(0);" class="icon" onclick="navFunction()"><i class="fa fa-bars"></i>             
+    </nav>
+    <script src="js\nav.js"></script>
+	<header class="slideshow-container">
+		<div class="mySlideshows fade">
+		    <img src="img/slide01.jpg" style="width:100%">
+		    <div class="text">Orange Bird Street Market</div>
+		</div>	  
+		<div class="mySlideshows fade">
+		    <img src="img/slide02.jpg" style="width:100%">
+		    <div class="text">Orange Bird Street Market</div>
+		</div>	  
+		<div class="mySlideshows fade">
+		    <img src="img/slide03.jpg" style="width:100%">
+		    <div class="text">Orange Bird Street Market</div>
+		</div>
+        <div class="mySlideshows fade">
+		    <img src="img/slide04.jpg" style="width:100%">
+		    <div class="text">Orange Bird Street Market</div>
+		</div>	  
+		<div class="mySlideshows fade">
+		    <img src="img/slide05.jpg" style="width:100%">
+		    <div class="text">Orange Bird Street Market</div>
+		</div>
+        <div> <!--控制左右移動，當觸及時會啟動plusSlides的function-->
+		    <a class="prev" onclick="plusSlides(-1)">&#10092;</a>
+		    <a class="next" onclick="plusSlides(1)">&#10093;</a>
+	    </div>  
+	    <!--是包覆圓點的元件，每一個span都是一個點，觸及後會啟動currentSlide的function-->
+	    <div style="text-align:center">
+		    <span class="dot" onclick="currentSlide(1)"></span>
+		    <span class="dot" onclick="currentSlide(2)"></span>
+		    <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+		    <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </header>
+    <section class="row"> 
+        <div class="column side">
+            <img src="img/pic01.jpg" width="100%">
+        </div>
+        <div class="column middle">
+            <h2>Orange Bird Street Market</h2>
+            <p>It's very simple, I buy what I like.</p>
+            <p>I am happy to deal with trade and private clients alike and I hope you enjoy looking at our website and the flow of stock I work very hard to find.</p>
+            <p>Sometimes, like migratory fish, human beings roam the sea, but in the end they desperately want to swim back to their birthplace.The emotion for hometown is an inexplicable nostalgia.</p>
+        </div>
+        <div class="column side">
+            <img src="img/pic02.jpg" width="100%">
+        </div>
+    </section> 
+    <section class="row"> 
+        <div class="column middle">
+            <img src="img/pic03.jpg" width="100%">
+        </div>
+        <div class="column side">
+            <h2>魔方小騎兵</h2>
+            <p>Sometimes, like migratory fish, human beings roam the sea, but in the end they desperately want to swim back to their birthplace.</p>
+            <h3>$980</h3>
+            <h5><a class="button" href="#">加入購物車</a></h5>
+        </div>
+        <div class="column side">
+            <img src="img/pic04.JPG" width="100%">
+        </div>
+    </section>
+    <section class="row"> 
+        <div class="column side">
+            <img src="img/pic06.jpg" width="100%">
+        </div>
+        <div class="column middle">
+            <img src="img/pic05.jpg" width="100%">
+        </div>
+        <div class="column side">
+            <h2>五金工具車</h2>
+            <p>DIY五金工具車是極致工藝的表現，你可以自行拆解並組裝，體驗DIY的樂趣。</p>
+            <h3>$680</h3>
+            <h5><a class="button" href="#">加入購物車</a></h5>
+        </div>
+    </section>
+    <section>
+        <h2>Contact</h2>
+        <p>If you require further clarification or would like to make a purchase, please call my office on 1234567890 or use the Sales Enquiry link on the stock item and one of my team will come back to you. Please see the below regarding customs and import taxes.</p>
+        <div class="box">
+        <form action="/action_page.php">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your name..">
+            <label for="mail">Email</label>
+            <input type="email" id="mail" name="mail" placeholder="Your Email.."> 
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="taiwan">Taiwan</option>
+                <option value="australia">Australia</option>
+                <option value="japan">Japan</option>
+                <option value="usa">USA</option>
+            </select>
+            <label for="text">Opinion</label>
+            <input type="text" id="text" name="text" placeholder="Your Opinion..">               
+            <input type="submit" value="傳送">
+        </form>
+        </div>
+    </section>
+    <section>
+        <h2>我們的位置</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.796118730486!2d121.29119791484057!3d24.973050384000953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681f248d540351%3A0x1aa61e316733f0d6!2z5qGD6Iqx57ej6Kit6KiI5LqL5qWt5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1653468969318!5m2!1szh-TW!2stw" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <a href="#"><i class="fa-brands fa-facebook fa-fw fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-fw fa-2x"></i></a>
+        <a href="https://www.youtube.com/channel/UC0PgGZ863G9AKrKLzPRDNCg"><i class="fa-brands fa-youtube fa-fw fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram-square fa-fw fa-2x"></i></a>
+        <h6>Copyright © 王小桃</h6>
+    </footer>
+    <!--<script src="js\mySlides.js"></script>-->
+    <script src="js\mySlidesAuto.js"></script>
+</body>
+</html>
