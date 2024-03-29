@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多維陣列範例</title>
+	<style>
+		body {
+			text-align: center;
+		}
+		h1 {
+            font-size: 3rem; /*文字大小*/
+            letter-spacing: 5px; /*字距*/
+            text-decoration: underline solid orangered 20%; /*在文字下方加入底線*/
+        }
+        div{
+            width: 800px; /*寬度固定*/
+            height: 180px; /*高度固定*/
+            padding: 20px;
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 10px #484848 solid;
+            box-sizing: border-box; /*padding及border將不影響總width(寬度)*/
+            background: salmon;
+            color:#FFF;
+			font-size: 1.2rem; /*文字大小*/
+        }
+    </style>
+<body>
+	<h1>員工電話查詢系統</h1>
+	<div>
+	<form name="staffform">
+		輸入姓名<input type="text" name="s1" value="姓名"><br><br>
+		電話號碼<input type="text" name="s2"><br><br>
+		<input type="button" value="查詢" onclick="staff()">
+	</form>
+	</div>
+</body>
+<script>
+	let a = new Array (['',''],
+					   ['王小桃', '0900125000'],['徐小泰', '0900123456'], ['陳全華', '0900456789'],
+					   ['劉小華', '0900168168'],['林零九', '0900555666'], ['吳好有', '0900777888'], 
+					   ['王小珠', '0900333222'],['余小樂', '0900999666'], ['李小哲', '0900555111'], 
+					   ['安小熊', '0900090000'],['鄭小新', '0900111333'], ['蔡依依', '0900666999']);
+	function staff() {
+    	let found = false;
+    	let txt = staffform.s1.value;
+    	for(i = 1; i <= 12; i++ ) {
+        	if (a[i][0]==txt) {
+            	found = true;
+            	break;
+        	}
+    	}
+    	if(found) {
+        	staffform.s2.value = a[i][1];
+    	} else {
+        	staffform.s2.value = '沒有這位員工喔！' ;
+    	}
+	}
+</script>
+</html>

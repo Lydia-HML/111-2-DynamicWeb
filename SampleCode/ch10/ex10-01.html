@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let score = prompt ('請輸入分數', '0');  //將輸入的資料存入變數score中
+if (score >= 60 && score < 80){ //score大於等於60且小於80
+   document.write('pass，拜託再努力一些些'); //在網頁中顯示訊息
+} 
+else if(score >= 80 && score < 90){ //score大於等於80且小於90
+   document.write('還行，繼續維持');
+} 
+else if(score >= 90 && score <= 100){ //score大於等於90且小於等於100
+   document.write('不賴喔！很棒');
+} 
+else {
+   document.write('這分數不行啦！請再加油'); //以上條件都不符合時顯示此訊息
+}
+</script>
+</body>
+</html>

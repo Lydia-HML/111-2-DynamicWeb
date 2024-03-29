@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列範例</title>
+    <style>
+		body {
+			text-align: center;
+		}
+		h1 {
+            font-size: 3rem; /*文字大小*/
+            letter-spacing: 5px; /*字距*/
+            text-decoration: underline solid orangered 20%; /*在文字下方加入底線*/
+        }
+        div{
+            width: 800px; /*寬度固定*/
+            height: 105px; /*高度固定*/
+            padding: 20px;
+            margin: 10px auto; /*設定左右邊距為auto，可以讓區塊水平居中*/
+            border: 10px #484848 solid;
+            box-sizing: border-box; /*padding及border將不影響總width(寬度)*/
+            background: #56befa;
+            color:#FFF;
+			font-size: 2rem; /*文字大小*/
+			font-weight: 900;
+        }
+    </style>
+<body>
+	<h1>每日一句</h1>
+	<div>
+		<script>
+			classic = new Array();
+			i = 0;
+			classic[i++] = '人生沒有彩排，每天都是現場直播！';
+			classic[i++] = '大學就是大概學學！';
+			classic[i++] = '人生不能像做菜、把所有的料都準備好才下鍋。';
+			classic[i++] = '生命中最值得投資的是自己。';
+			classic[i++] = '鹹魚翻身，還是鹹魚。';
+			classic[i++] = '情緒性發言大可不必。';
+			classic[i++] = '我就不能講錯一句話？';
+			classic[i++] = '一切假知識比無知更危險。';
+			classic[i++] = '放棄很簡單，堅持最難！';
+			classic[i++] = '願要大、志要堅、氣要柔、心要細。';
+			index = Math.floor(Math.random()*classic.length);
+			document.write(classic[index]);  //輸出索引值
+		</script>
+	</div>
+</body>
+</html>
