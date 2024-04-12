@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>橘鳥市場街</title>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" data-position="fixed">
+			<h1>橘鳥市場街商品</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#page1" class="ui-button-active">工具車</a></li>
+					<li><a href="#page2" class="ui-button-active">小騎兵</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div data-role="main" class="ui-content">
+			<ul data-role="listview" data-inset="true" data-split-icon="shop" data-split-theme="a">
+				<li data-role="list-divider">DIY工具車</li>
+				<li>
+					<a href="#">
+					<img src="https://picsum.photos/id/1071/250/250">
+					<h2>連結DIY工具車</h2>
+					<p>可自行DIY的工具車，組合出自己喜歡的模型</p></a>
+					<a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">shop</a>
+				</li>
+				<li>
+					<a href="#">
+					<img src="https://picsum.photos/id/111/250/250">
+					<h2>戰鬥DIY工具車</h2>
+					<p>可自行DIY的工具車，組合出自己喜歡的模型</p></a>
+					<a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">shop</a>
+				</li>
+				<li data-role="list-divider">魔方小騎兵</li>
+				<li>
+					<a href="#">
+					<img src="https://picsum.photos/id/355/250/250">
+					<h2>方頭魔方小騎兵</h2>
+					<p>外表逗趣可愛，自用送禮兩相宜</p></a>
+					<a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">shop</a>
+				</li>
+				<li>
+					<a href="#">
+					<img src="https://picsum.photos/id/252/250/250">
+					<h2>圓頭魔方小騎兵</h2>
+					<p>外表逗趣可愛，自用送禮兩相宜</p></a>
+					<a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">shop</a>
+				</li>
+			</ul>
+			<div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" 	style="max-width:340px; padding-bottom:2em;">
+				<h3>購買資訊</h3>
+				<p>現在購買有優惠，甜甜價，不要錯過了。</p>
+				<a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini">Buy: $599</a>
+				<a href="#" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">取消</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>All rights reserved.</h4>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>表單範例</title>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(document).on("pagecreate", "#page", function() {
+           	$("#button1").on("click", function() {
+            	var msg = "姓名=" + $("#username").val() + "\n";
+					msg += "日期與時間=" + $("#inputdate").val() + "\n";
+                    msg += "密碼=" + $("#pswd").val() + "\n";
+                    msg += "目前進度=" + $("#points").val() + "\n";
+                    msg += "你喜歡我對嗎？=" + $("#slider1").val() + "\n";
+					msg += "你說啊=" + $("input[name=lovechoice]:checked").val()+ "\n";
+					msg1="顏色=";
+					$('input[type="checkbox"]:checked').each(function(){
+						msg1 += $(this).val() + "";
+					});
+					msg += msg1+"\n";
+					msg += "食物：" + $("#food option:checked").val();
+             	alert(msg);
+			});  
+		});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" data-position="fixed">
+			<h1>表單</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form method="post" action="demoform.php">
+				<div>
+					<label for="username" class="ui-hidden-accessible">姓名:</label>
+					<input type="text" name="username" id="username" placeholder="姓名">
+					<label for="inputdate" class="ui-hidden-accessible">日期與時間:</label>
+					<input type="datetime-local" name="inputdate" id="inputdate" placeholder="輸入日期與時間">
+					<label for="pswd" class="ui-hidden-accessible">密碼:</label>
+					<input type="password" name="passw" id="pswd" placeholder="密碼" data-clear-btn="true">
+					<label for="points">目前進度</label>
+					<input type="range" name="points" id="points" value="50" min="0" max="100" data-highlight="true" data-show-value="true">
+					<label for="slider1">你喜歡我對嗎？</label>
+					<select name="slider1" id="slider1" data-role="slider">
+						<option value="no">NO</option>
+						<option value="yes">YES</option>
+					</select>
+					<p>你說啊</p>
+					<fieldset data-role="controlgroup">
+						<label for="lovechoice1">我愛你</label>
+						<input type="radio" name="lovechoice" id="lovechoice1" value="我愛你" checked="">
+						<label for="lovechoice2">我不愛你</label>
+						<input type="radio" name="lovechoice" id="lovechoice2" value="我不愛你">
+					</fieldset>
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<p>選擇你喜歡的顏色</p>
+						<label for="red">我愛红色</label>
+						<input type="checkbox" name="favcolor" id="red" value="red">
+						<label for="black">我愛黑色</label>
+						<input type="checkbox" name="favcolor" id="black" value="black">
+						<label for="blue">我愛藍色</label>
+						<input type="checkbox" name="favcolor" id="blue" value="blue">  
+						<label for="green">我愛綠色</label>
+						<input type="checkbox" name="favcolor" id="green" value="green">
+						<label for="pink">我愛粉紅色</label>
+						<input type="checkbox" name="favcolor" id="pink" value="pink">
+					</fieldset>
+					<fieldset>
+						<label for="food">選擇你喜歡的食物</label>
+						<select name="food" id="food" data-native-menu="false">
+							<option value="苦瓜">苦瓜</option>
+							<option value="茄子">茄子</option>
+							<option value="香菜">香菜</option>
+						</select>
+					</fieldset>
+					<button id="button1">送出</button>
+				</div>
+			  </form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>All rights reserved.</h4>
+		</div>
+	</div>
+</body>
+</html>
