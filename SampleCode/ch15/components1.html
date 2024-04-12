@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>collapse & accordion</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<style>
+		body {
+			margin: 10px;
+		}
+		p {
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<p></p>
+	<!--collapse-->
+	<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" >桃花緣設計 徐正泰</a>
+	<button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" >大岩打檔 黃新斌</button>
+	<div class="collapse" id="collapseExample1">
+		<div class="card card-body">
+			團隊投入各項創作藝術、機械工藝美學及多樣化商品開發，並創設自有品牌，冀能將文化結合創意，帶來更豐富的生活美學及樂趣。
+		</div>
+	</div>
+	<div class="collapse" id="collapseExample2">
+		<div class="card card-body">
+			原住民藝術發展，基於族群傳統文化母體的延伸，型式較為自由，強調手工、以自然媒材的複合性應用為普遍創作趨勢。藝術往往表現於生活之中，原住民的藝術表現相較於不同族群，表現非常多樣化且獨具性。
+		</div>
+	</div>
+	<p></p>
+	<!--accordion-->
+	<div class="accordion" id="accordionExample">
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingOne">
+			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">桃花緣設計 徐正泰</button>
+			</h2>
+			<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<p>團隊投入各項創作藝術、機械工藝美學及多樣化商品開發，並創設自有品牌，冀能將文化結合創意，帶來更豐富的生活美學及樂趣。</p>
+					<p>No great genius has ever existed without some touch of madness. －Aristotl</p>	
+					<p>桃花緣文化創意設計團隊，由一群以文化創意為神聖使命的完美結合，整合居家美學設計、商業空間、生活風格、展演活動、廣告設計、木工製作、鐵件加工、影像意象、編輯出版及文化創意服務等專業領域，協助國內學子參加國內外設計展演、臺灣地方產業提升計畫、推動出版設計相關美學書籍，持續執行政府公部門多項文化創意專案…等，投入各項創作藝術、機械工藝美學（Mechanical Art Devices）及各式商品開發，並創設自有品牌，冀能將文化結合創意，帶來更豐富的生活美學及樂趣。</p>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingTwo">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">大岩打檔 黃新斌</button>
+			</h2>
+			<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<p>原住民藝術發展，基於族群傳統文化母體的延伸，型式較為自由，強調手工、以自然媒材的複合性應用為普遍創作趨勢。藝術往往表現於生活之中，原住民的藝術表現相較於不同族群，表現非常多樣化且獨具性。</p>
+					<p>集特技師，賽車手，機車維修工程師及手工車創作師於一身，黃新斌滿滿的熱情和幹勁，就如同他泰雅族身份一樣，綻放強烈陽光。「TAYAL」意指泰雅族，「TATAK」在泰雅族語表示狩獵屋，「大岩打檔TAYAL TATAK」這個充滿原住民文化的語彙中，已經充分說明他們的風格特色。和一般手工車創作者不一樣是，他並不會依市場流行的趨勢或特定風格去創作，而是充分掌握騎乘者的個性特色，再以不同的組件去創作，並非一般將部品套件直接換裝，更重要的是，在引擎組裝技術上，他有著非常專業的技術可以去完成，除了外觀技術上，他更重視安全及機械原理，作品充分表達騎士所要崇尚的自由與奔放感。</p>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingThree">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">桃花緣設計 徐義貿</button>
+		  	</h2>
+			<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				<div class="accordion-body">
+					<p>規，就是畫圓的工具，就是圓規。矩，畫直角或方形的工具。「不以規矩，不能成方圓」，這是徐義貿每日工作奉行的圭臬。</p>
+					<p>在金屬加工領域中，除了技術與經驗的深耕外，他更重視每一種材質的特性與組成，為的就是在解構主義中，除了拆解以外，更重要的是重新組構的過程，若是對材質沒有足夠的知識與技術外，拆解後的材料，只能回收融合再製，無法創作。所以在此，他擅長異材質的結合，以及利用對金屬的理解，能夠控制金屬色彩及質感，進而創新及創作。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p></p>
+	<!--accordion取消邊框與圓角-->
+	<div class="accordion accordion-flush" id="accordionExample1">
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingOne">
+			<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1">桃花緣設計 徐正泰</button>
+			</h2>
+			<div id="collapseOne1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+				<div class="accordion-body">
+					<p>團隊投入各項創作藝術、機械工藝美學及多樣化商品開發，並創設自有品牌，冀能將文化結合創意，帶來更豐富的生活美學及樂趣。</p>
+					<p>No great genius has ever existed without some touch of madness. －Aristotl</p>	
+					<p>桃花緣文化創意設計團隊，由一群以文化創意為神聖使命的完美結合，整合居家美學設計、商業空間、生活風格、展演活動、廣告設計、木工製作、鐵件加工、影像意象、編輯出版及文化創意服務等專業領域，協助國內學子參加國內外設計展演、臺灣地方產業提升計畫、推動出版設計相關美學書籍，持續執行政府公部門多項文化創意專案…等，投入各項創作藝術、機械工藝美學（Mechanical Art Devices）及各式商品開發，並創設自有品牌，冀能將文化結合創意，帶來更豐富的生活美學及樂趣。</p>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingTwo">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2">大岩打檔 黃新斌</button>
+			</h2>
+			<div id="collapseTwo2" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+				<div class="accordion-body">
+					<p>原住民藝術發展，基於族群傳統文化母體的延伸，型式較為自由，強調手工、以自然媒材的複合性應用為普遍創作趨勢。藝術往往表現於生活之中，原住民的藝術表現相較於不同族群，表現非常多樣化且獨具性。</p>
+					<p>集特技師，賽車手，機車維修工程師及手工車創作師於一身，黃新斌滿滿的熱情和幹勁，就如同他泰雅族身份一樣，綻放強烈陽光。「TAYAL」意指泰雅族，「TATAK」在泰雅族語表示狩獵屋，「大岩打檔TAYAL TATAK」這個充滿原住民文化的語彙中，已經充分說明他們的風格特色。和一般手工車創作者不一樣是，他並不會依市場流行的趨勢或特定風格去創作，而是充分掌握騎乘者的個性特色，再以不同的組件去創作，並非一般將部品套件直接換裝，更重要的是，在引擎組裝技術上，他有著非常專業的技術可以去完成，除了外觀技術上，他更重視安全及機械原理，作品充分表達騎士所要崇尚的自由與奔放感。</p>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<h2 class="accordion-header" id="headingThree">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3">桃花緣設計 徐義貿</button>
+		  	</h2>
+			<div id="collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+				<div class="accordion-body">
+					<p>規，就是畫圓的工具，就是圓規。矩，畫直角或方形的工具。「不以規矩，不能成方圓」，這是徐義貿每日工作奉行的圭臬。</p>
+					<p>在金屬加工領域中，除了技術與經驗的深耕外，他更重視每一種材質的特性與組成，為的就是在解構主義中，除了拆解以外，更重要的是重新組構的過程，若是對材質沒有足夠的知識與技術外，拆解後的材料，只能回收融合再製，無法創作。所以在此，他擅長異材質的結合，以及利用對金屬的理解，能夠控制金屬色彩及質感，進而創新及創作。</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Momoco BLOG</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<style>
+		header {
+			grid-area: header;
+			background-color: #8dc1c5;
+			padding: 30px;
+			text-align: center;
+		} 
+		img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
+		p{text-align: justify;}
+	</style>
+</head>
+<body>
+	<!--導覽列元件-->
+	<nav class="navbar sticky-top navbar-expand-md bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+			<img src="chat-square-heart-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> MOMOCO</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">我的旅遊</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">我的美食</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">我的露營</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">北部露營區</a></li>
+							<li><a class="dropdown-item" href="#">中部露營區</a></li>
+							<li><a class="dropdown-item" href="#">南部露營區</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">花東露營區</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-danger" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<header>
+		<h1 class="display-4"><i class="bi bi-camera"></i></h1>
+		<h1 class="display-5">Momoco BLOG</h1>
+		<h1 class="display-3">Travel, Camping, Food</h1>
+		<!--Button offcanvas-->
+		<button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#exampleModal">About Me</button>
+		<!--Offcanvas-->
+		<div class="offcanvas offcanvas-start" id="exampleModal">
+			<div class="offcanvas-header">
+				<h1 class="offcanvas-title"><i class="bi bi-camera"></i> Momoco</h1>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+			</div>
+			<div class="offcanvas-body">
+				<h4>歡迎來到王小桃部落格</h4>
+				<p class="text-center">用最直白的文字<br>分享我的旅遊、美食、購物與露營</p>
+				<img src="https://picsum.photos/id/342/250/250" class="rounded-circle mx-auto d-block">
+				<div class="list-group list-group-flush pt-3">
+					<a href="#" class="list-group-item list-group-item-action list-group-item-danger">我的美食</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-success">我的旅遊</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-warning">我的露營</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-info">我的住宿</a>
+					<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">我的購物</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container py-3 mb-3">
+		<div class="row align-items-center">
+			<div class="col-sm-8 py-3">
+			  <h1 class="display-5">跟我一起卡蹓馬祖</h1>
+			  <h3 class="text-info">看海潮、看山、看書、吹風、喝咖啡，別忘了發呆</h3>
+			  <p>對於我這個沒有經過戰亂、沒有風雨的六年級生來說，這片貧瘠的小島，似乎毫無吸引之處，只想找美食、找紀念品、找露天咖啡座………卻因朝陰夕暉的海洋氣候，一陣大雨滂沱之後，讓我看見這個小島的美！有時候，人類像洄游魚類一樣，在大海中闖蕩，最後卻拼命想游回出生地。對故鄉的情感，是一種無法解釋的鄉愁。我想，這是我父親為何在南竿蓋房子的原因吧？！</p>
+			  <button class="btn btn-outline-info">Read More</button>
+			</div>
+			<div class="col-sm-4 py-3">
+				<img src="https://picsum.photos/id/58/450/350" class="img-fluid img-thumbnail">
+			</div>
+		</div>
+		<div class="row align-items-center" style="background-color:#f3f2f2;">
+			<div class="col-sm-8 py-3">
+				<h1 class="display-5">法國巴黎</h1>
+				<h3 class="text-danger">令人陶醉的巴黎Bonjour!</h3>
+				<p>Avec ses nombreuses salles de spectacles, de théâtres, de cafés et de restaurants, les Grands Boulevards offrent un lieu d’animation et de divertissement très prisé des Parisiens. Ils recèlent bien d’autres trésors à ne pas manquer : une architecture exceptionnelle, des lieux chargés d’histoire, des passages couverts au charme désuet, des musées insolites et bien d’autres curiosités.</p>
+				<button class="btn btn-outline-danger">Read More</button>
+			</div>
+			<div class="col-sm-4 py-3 order-lg-first">
+				<img src="https://picsum.photos/id/234/450/350" class="img-fluid img-thumbnail">
+			</div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col-sm-8 py-3">
+				<h1 class="display-5">葡萄牙里斯本</h1>
+				<h3 class="text-warning">美麗又復古的黃色電車</h3>
+				<p>If you’re not a big fan of travelling unprepared, here you’ll find several itineraries and suggestions for guided tours so that you can choose the one that most suits your tastes and interests. From buses that follow the main arteries and most important areas of Lisbon to original amphibious buses which allow you to visit the city and the river at the same time and enjoy a generous dose of excitement, explore these options to discover this old imperial capital without fear of getting lost. Also try the helicopter tours to get a unique view of the city. But if you’re a fan of wandering along streets to get to know a city better, you’ll also find various walking tours providing all the close up details you could want. And plenty of excuses for taking a seat at a pavement café for a rest.</p>
+				<button class="btn btn-outline-warning">Read More</button>
+			</div>
+			<div class="col-sm-4 py-3">
+				<img src="https://picsum.photos/id/402/450/350" class="img-fluid img-thumbnail">
+			</div>
+	</div>
+	<footer class="text-center bg-dark text-white py-3">
+		<small>momoco blog</small>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
