@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>按鈕範例</title>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header" data-position="fixed">
+			<h1>表單與超連結按鈕</h1>
+			<a href="#page2">下一頁</a>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#" data-role="button" id="a_btn">超連結按鈕</a>
+			<button id="button_btn">Button按鈕</button>
+			<input id="input_btn" type="button" value="Input按鈕">
+			<input id="submit_btn" type="submit" value="Submit按鈕">
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>All rights reserved.</h4>
+		</div>
+	</div>
+	<div data-role="page" id="page2">
+		<div data-role="header" data-position="fixed" data-add-back-btn="true">
+			<a href="#page1">上一頁</a>
+			<h1>按鈕圖示</h1>
+			<a href="#page3">下一頁</a>
+		</div>
+		<div role="main" class="ui-content">
+			<a href="#" data-role="button" data-icon="action">動作</a>
+        	<a href="#" data-role="button" data-icon="alert">注意</a>
+       		<a href="#" data-role="button" data-icon="arrow-l">左箭頭</a>
+       		<a href="#" data-role="button" data-icon="arrow-d">下箭頭</a>        
+        	<a href="#" data-role="button" data-icon="arrow-d-l">下左箭頭</a>
+        	<a href="#" data-role="button" data-icon="arrow-d-r">下右箭頭</a>
+        	<a href="#" data-role="button" data-icon="arrow-r">右箭頭</a>
+			<a href="#" data-role="button" data-icon="audio">音訊</a>
+			<a href="#" data-role="button" data-icon="back">返回</a>
+			<a href="#" data-role="button" data-icon="calendar">日曆</a>
+			<a href="#" data-role="button" data-icon="camera">照相機</a>
+			<a href="#" data-role="button" data-icon="edit">編輯</a>
+			<a href="#" data-role="button" data-icon="eye">眼睛</a>
+			<a href="#" data-role="button" data-icon="forbidden">禁止</a>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h4>All rights reserved.</h4>
+		</div>
+	</div>
+		<div data-role="page" id="page3">
+			<div data-role="header" data-position="fixed">
+				<a href="#page2">上一頁</a>
+				<h1>按鈕位置</h1>
+				<a href="#page4">下一頁</a>
+			</div>
+			<div role="main" class="ui-content">
+				<a href="#" data-role="button" data-icon="alert" data-iconpos="left">注意</a>
+				<a href="#" data-role="button" data-icon="shop" data-iconpos="right">購物</a>
+				<a href="#" data-role="button" data-icon="star" data-iconpos="top">星號</a>
+				<a href="#" data-role="button" data-icon="home" data-iconpos="bottom">首頁</a>
+				<a href="#" data-role="button" data-icon="info" data-iconpos="notext">訊息</a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>All rights reserved.</h4>
+			</div>
+		</div>
+		<div data-role="page" id="page4">
+			<div data-role="header" data-position="fixed">
+				<a href="#page3">上一頁</a>
+				<h1>與內容同寬的按鈕</h1>
+				<a href="#page5">下一頁</a>
+			</div>
+			<div role="main" class="ui-content">
+				<a href="#" data-role="button" data-icon="power" data-inline="true">電源</a>
+				<a href="#" data-role="button" data-icon="gear" data-inline="true">齒輪</a>
+				<a href="#" data-role="button" data-icon="search" data-inline="true">搜尋</a>
+				<a href="#" data-role="button" data-icon="info" data-inline="true">訊息</a>
+				<a href="#" data-role="button" data-icon="location" data-inline="true">定位</a>
+				<a href="#" data-role="button" data-icon="cloud" data-inline="true">雲端</a>
+				<a href="#" data-role="button" data-icon="plus" data-inline="true">評論</a>
+				<a href="#" data-role="button" data-icon="back" data-inline="true">後退</a>
+				<a href="#" data-role="button" data-icon="bullets" data-inline="true">子彈</a>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>All rights reserved.</h4>
+			</div>
+		</div>
+		<div data-role="page" id="page5">
+			<div data-role="header" data-position="fixed">
+				<a href="#page4">上一頁</a>
+				<h1>群組按鈕</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<div data-role="controlgroup">
+					<a href="#" data-role="button" data-icon="clock">時鐘</a>
+					<a href="#" data-role="button" data-icon="phone">電話</a>
+					<a href="#" data-role="button" data-icon="mail">郵件</a>
+					<a href="#" data-role="button" data-icon="calendar">日曆</a>
+				</div>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href="#" data-role="button" data-icon="search">搜尋</a>
+					<a href="#" data-role="button" data-icon="info">訊息</a>
+					<a href="#" data-role="button" data-icon="search">搜尋</a>
+					<a href="#" data-role="button" data-icon="cloud">雲端</a>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h4>All rights reserved.</h4>
+			</div>
+		</div>
+</body>
+</html>
